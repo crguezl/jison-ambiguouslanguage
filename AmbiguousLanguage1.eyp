@@ -1,0 +1,33 @@
+# ~/LEyapp/examples/debuggingtut$ eyapp -vTC AmbiguousLanguage1.eyp 
+# 1 shift/reduce conflict and 1 reduce/reduce conflict
+# ~/LEyapp/examples/debuggingtut$ eyapp -P ab.eyp 
+# ~/LEyapp/examples/debuggingtut$ ./AmbiguousLanguage1.pm -t -i -m 1 -c 'abbcc'
+# ~/LEyapp/examples/debuggingtut$ ./AmbiguousLanguage1.pm -t -i -m 1 -c 'aabbc'
+
+%token AB=%//=ab
+%token a b c
+%%
+s: AB aeqb 
+ | beqc
+;
+
+aeqb: ab cs
+;
+
+ab: /* empty */ 
+  | a ab b
+;
+
+cs : /* empty */ | cs c 
+;
+
+beqc: as bc
+;
+
+bc: /* empty */ | b bc c
+;
+
+as: /* empty */  | as a
+;
+
+%%

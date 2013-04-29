@@ -1,0 +1,13 @@
+# See AmbiguousLanguage2.eyp
+%token EOF = /\Z/
+%%
+s:   ab 'c'
+  |  ab EOF
+;
+
+ab: /* empty */ 
+  | 'a'  ab 'b'
+;
+
+%%
+
