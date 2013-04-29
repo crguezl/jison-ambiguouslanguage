@@ -1,3 +1,6 @@
+default:
+	 jison AmbiguousLanguage2.jison
+	 node AmbiguousLanguage2.js input
 AmbiguousLanguage1:
 	 eyapp -vTC AmbiguousLanguage1.eyp 
 	 eyapp -P ab.eyp 
