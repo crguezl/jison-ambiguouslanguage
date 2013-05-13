@@ -11,11 +11,9 @@ ss: s           { console.log($s); }
    
 s: as bs cs 
     { 
-                             
+      console.log(yy.lexer.showPosition());
       console.log('as = '+$as+' bs = '+$bs+' cs = '+$cs);
-      if ($as == $bs)      { 
-                             $$ = true; 
-                           }
+      if ($as == $bs)      { $$ = true; }
       else if ($bs == $cs) { $$ = true; }
       else { $$ = false; }
     }
