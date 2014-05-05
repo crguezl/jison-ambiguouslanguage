@@ -10,6 +10,7 @@ is the set
 
        { a^n b^n c^m : n >= 0, m >= 0 } U { a^n b^m c^m : n >= 0, m >= 0 }
 
+The following ambiguous grammar generates the language:
 
         s: aeqb | beqc ;
         aeqb: ab cs ;
