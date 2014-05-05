@@ -20,10 +20,10 @@ The following ambiguous grammar generates the language:
         bc: /* empty */ | 'b' bc 'c' ;
         as: /* empty */ | as 'a' ;
 
-The symbol ´aeqb´ correspond to guess that there are the same number
-of ´a´s than ´b´s.  In the same way, ´beqc´ starts the subgrammar
-for those phrases where the number of ´b´s is equal to the number
-of ´c´s. The usual approach to eliminate the ambiguity by changing
+The symbol `aeqb` correspond to guess that there are the same number
+of `a`s than `b`s.  In the same way, `beqc` starts the subgrammar
+for those phrases where the number of `b`s is equal to the number
+of `c`s. The usual approach to eliminate the ambiguity by changing
 the grammar to an unambiguous one does not work.
 
 See section *"Parsing inherently ambiguous languages"* 
